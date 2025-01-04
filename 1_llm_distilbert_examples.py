@@ -111,7 +111,7 @@ if __name__ == "__main__":
         If you have any questions or uncertainties, or if you are interested in the results, you can contact me at any time via email (milanmaj@edu.aau.at).
         I am very much looking forward to your participation!
         Best regards,
-        Milan Majstorovic"""
+        Milan Majstorovic """
     ]
 
     predictions = phishing_detector.predict(test_contents)

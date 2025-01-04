@@ -115,7 +115,7 @@ def main():
         Bei Fragen/Unklarheiten sowie bei Interesse an den Ergebnissen könnt ihr euch jederzeit per E-Mail (milanmaj@edu.aau.at) an mich wenden.
         Ich freue mich sehr über eure Teilnahme!
         Liebe Grüße
-        Milan Majstorovic""",
+        Milan Majstorovic """,
 
         """"Dear Students,
         As part of my bachelor's thesis, I am conducting a study on the topic 'Comparison of Digital Advertising Campaigns: Storytelling versus Product Advertising.' I would greatly appreciate your participation.
