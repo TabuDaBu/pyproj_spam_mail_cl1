@@ -63,41 +63,35 @@ if __name__ == "__main__":
     phishing_detector = EmailPhishingDetection(model_name, api_key)
 
     test_contents = [
-        "Hi Team, please find the attached report from today's meeting. Let me know if you have any further questions.",
-        "Meeting rescheduled to next Monday at 10 AM.",
-        "Meting rescheduld to next Mondy at 10 AM., mandatory atendaynce, outherwirse your are fired",
-        "Meting rescheduled to next Monday at 10 AM., mandatory attendance, otherwise your are fired",
-        "Reminder: Your package delivery is scheduled for tomorrow. The tracking # is 1024151515, click here to get further information.",
-        "Hi Steve, Lunch at the new cafe? Let me know.",
-        "Hi you, Exclusive offer: Save 50% on all items. Limited time only!",
-        "Exclusive offer: Save 50% on all items. Limited time only!",
-        "Your invoice for the last purchase is attached.",
-        "Don't miss out on this once-in-a-lifetime opportunity!",
-        "We are excited to announce our new product line launching next week. Join us for an exclusive webinar where our team will showcase the latest innovations and features. Register now to secure your spot.",
-        "Thank you for your continued support. Our records indicate your subscription will expire soon. Renew now to ensure uninterrupted access to premium services and special member discounts.",
-        "Meeting rescheduled. Please confirm your availability by replying to this email.",
-        "Congratulations! You've been selected for an exclusive deal. Click here to claim your $1000 gift card instantly. Hurry, offer expires in 24 hours! Don’t miss this once-in-a-lifetime opportunity. Validate your account now to access this reward. Terms and conditions apply. Act fast!",
-        "Hi Team,Thank you for attending the meeting today. Attached is the summary document with action items for each department. Please review and let me know if there are any questions or updates needed. Let’s aim to complete all tasks by the end of the week. Best, John",
-        """
-        Correios, Olá, daniel.buttazoni@hotmail.com, 
+        "hi dan, lunch at the new cafe? let me know.",
+
+        "meeting rescheduled. please confirm your availability by replying to this email.",
+
+        " hi steve, as discussed before, here the link to my youtube channel: https://www.youtube.com/@LinusTechTips see you, regards linus ",
+
+        "https://www.youtube.com",
+
+        "https://www.youtube.com/@LinusTechTips",
+
+        """Olá, daniel.buttazoni@gamil.com, 
         Seu pedido foi bloqueado pela fiscalização alfandegária devido à falta de pagamento de taxas obrigatórias. 
         Para garantir o recebimento do seu pedido, por favor, efetue o pagamento o mais breve possível caso contrário seu pedido será cancelado sem reembolso. Clique no botão abaixo para realizar o pagamento: Efetuar Pagamento 
         <https://pedidocorreios.txbrasilcx.co.ua/taxa/taxacorreios951> Correios 2024 - Todos os direitos reservados. 
-        Este e-mail foi gerado automaticamente. Por favor, não responda.
-        """,
-        "<https://pedidocorreios.txbrasilcx.co.ua/taxa/taxacorreios951>",
-        "https://www.youtube.com",
-        "https://www.youtube.com/@LinusTechTips",
-        """ hi steve, as discussed before, here the link to my youtube channel: https://www.youtube.com/@LinusTechTips see you, regards linus """,
-        """Correios, Hallo, daniel.buttazoni@hotmail.com, 
-        Ihre Bestellung wurde von der Zollbehörde blockiert, da die erforderlichen Gebühren nicht bezahlt wurden. 
-        Um den Erhalt Ihrer Bestellung sicherzustellen, zahlen Sie bitte die Gebühren so schnell wie möglich, 
-        anderenfalls wird Ihre Bestellung storniert und es erfolgt keine Rückerstattung. 
-        Klicken Sie auf die Schaltfläche unten, um die Zahlung vorzunehmen: Zahlung vornehmen 
-        <https://pedidocorreios.txbrasilcx.co.ua/taxa/taxacorreios951> Correios 2024 - Alle Rechte vorbehalten. 
+        Este e-mail foi gerado automaticamente. Por favor, não responda.""",
+
+        """Hallo, daniel.buttazoni@gmail.com,
+        Ihre Bestellung wurde von der Zollbehörde blockiert, da die erforderlichen Gebühren nicht bezahlt wurden.
+        Um den Erhalt Ihrer Bestellung sicherzustellen, zahlen Sie bitte die Gebühren so schnell wie möglich, ansonsten wird Ihre Bestellung storniert und es erfolgt keine Rückerstattung. Klicken Sie auf die Schaltfläche unten, um die Zahlung vorzunehmen: Zahlung vornehmen
+        https://pedidocorreios.txbrasilcx.co.ua/taxa/taxacorreios951 Correios 2024 - Alle Rechte vorbehalten.
         Diese E-Mail wurde automatisch generiert. Bitte antworten Sie nicht darauf.""",
-        """
-        Liebe Studierende,
+
+        """Hello, daniel.buttazoni@gmail.com,
+        Your order has been blocked by customs due to unpaid required fees.
+        To ensure the receipt of your order, please pay the fees as soon as possible; otherwise, your order will be canceled, and no refund will be issued. Click on the button below to make the payment: Make Payment
+        https://pedidocorreios.txbrasilcx.co.ua/taxa/taxacorreios951 Correios 2024 - All rights reserved.
+        This email was generated automatically. Please do not reply to it.""",
+
+        """Liebe Studierende,
         im Rahmen meiner Bachelorarbeit führe ich eine Studie zum Thema "Vergleich digitaler Werbekampagnen: Storytelling versus Produktwerbung" durch. Ich würde mich sehr über eure Teilnahme freuen.
         Die Durchführung der Studie ist anonym und erfolgt online. Die Dauer beträgt ungefähr 5 Minuten.
         Die Studie findet ihr unter folgenden Link:
@@ -106,8 +100,18 @@ if __name__ == "__main__":
         Bei Fragen/Unklarheiten sowie bei Interesse an den Ergebnissen könnt ihr euch jederzeit per E-Mail (milanmaj@edu.aau.at) an mich wenden.
         Ich freue mich sehr über eure Teilnahme!
         Liebe Grüße
-        Milan Majstorovic
-        """
+        Milan Majstorovic""",
+
+        """"Dear Students,
+        As part of my bachelor's thesis, I am conducting a study on the topic 'Comparison of Digital Advertising Campaigns: Storytelling versus Product Advertising.' I would greatly appreciate your participation.
+        The study is conducted anonymously and takes place online. It will take approximately 5 minutes to complete.
+        You can find the study at the following link:
+        https://survey.aau.at/index.php/116195?lang=de
+        All data collected in the study will be treated confidentially and used exclusively for scientific purposes.
+        If you have any questions or uncertainties, or if you are interested in the results, you can contact me at any time via email (milanmaj@edu.aau.at).
+        I am very much looking forward to your participation!
+        Best regards,
+        Milan Majstorovic"""
     ]
 
     predictions = phishing_detector.predict(test_contents)
